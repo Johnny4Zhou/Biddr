@@ -1,0 +1,8 @@
+<h1>My Auction</h1>
+<% if user_signed_in? %>
+<%= @user.full_name %><hr>
+<% @user.auctions.each do |auction| %>
+<%=link_to auction.title, auction_path(auction) %>
+<hr>
+<% end %>
+<% end %>
